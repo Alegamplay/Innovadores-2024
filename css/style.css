@@ -1,0 +1,190 @@
+body {
+    background-color: rgb(12, 84, 97);
+    display: flex;
+    flex-direction: column;
+}
+
+.titulo {
+    color: rgb(246, 225, 206); /* Color del texto */
+    -webkit-text-stroke: 0.5px black; /* Contorno del texto */
+    background-color:  rgb(127, 0, 151); /* Color de fondo */
+    text-align: center; /* Alineación del texto */
+    font-size: 155%; /* Tamaño de la fuente */
+    font-family: 'Courier New', Courier, monospace; /* Fuente */
+    font-weight: bold; /* Grosor de la fuente */
+    border-radius: 35px; /* Borde redondeado */
+    -moz-border-radius: 35px; /* Borde redondeado para Firefox */
+    -webkit-border-radius: 35px; /* Borde redondeado para Safari/Chrome */
+    border: 2px solid transparent; /* Borde transparente */
+}
+
+/*.titulo:hover {
+    transition: font-size 0.3s ease;
+    font-size: 200%;
+}
+.textotitulo:hover img{
+    transition: width 0.3s ease;
+    width: 60px;
+}
+
+.titulo:not(:hover) {
+    transition: font-size 0.3s ease;
+}
+*/
+
+.textotitulo{
+    display: flex; /* Contenedor de tipo flex */
+    text-align: center; /* Alineación del texto */
+    justify-content: center; /* Alineación horizontal */
+}
+.textotitulo p {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+}
+
+.textotitulo img{
+    display: flex;
+    position: relative;
+    top: 15px;
+    right: 10px;
+    width: 40px;
+}
+footer {
+    color: red;
+    position: fixed; /* Posición fija */
+    bottom: 0%; /* Posición en la parte inferior */
+    right: 0%;
+    width: 100%; /* Ancho completo */
+    text-align: right;
+}
+
+footer:hover {
+    color: rgb(0, 0, 0);
+}
+
+.imagenesprincipal {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+    transform: translateY(42%);
+}
+
+.imagenbiologia:hover, .imageninnovadores:hover, .imagenrazonadores:hover {
+    transition: width 0.3s ease, filter 0.10s ease-in-out, border-radius 0.3s ease;
+    width: 370px;
+    filter: blur(5px);
+    animation: difuminado 0.8s forwards;
+    box-shadow: 0px 0px 22px 0px rgba(0, 0, 0, 1);
+    border-radius: 35px; /* Borde redondeado */
+    -moz-border-radius: 35px; /* Borde redondeado para Firefox */
+    -webkit-border-radius: 35px; /* Borde redondeado para Safari/Chrome */
+}
+
+@keyframes difuminado {
+    0% { filter: blur(5px); }
+    100% { filter: blur(0); }
+}
+
+.imagenbiologia:not(:hover), .imageninnovadores:not(:hover), .imagenrazonadores:not(:hover) {
+    transition: width 0.3s ease;
+}
+
+.desplegableImagen {
+    position: relative;
+    display: inline-block;
+}
+
+.desplegable {
+    display: none;
+    position: absolute;
+    top: 90%;
+    left: 0;
+    background-color: #86c3c3;
+    border: 1px solid #ccc;
+    padding: 0;
+    list-style: none;
+    width: 327px;
+}
+
+.desplegableImagen:hover .desplegable {
+    display: block;
+}
+
+.desplegable li {
+    padding: 6px;
+}
+
+.desplegable li a {
+    text-decoration: none;
+    color: #333;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.imageninnovadores {
+    border: 8px solid rgb(0, 255, 18);
+    transition: border-color 0.3s;
+}
+
+.imagenrazonadores {
+    border: 8px solid rgb(255, 255, 255);
+    transition: border-color 0.3s;
+}
+
+.imagenbiologia {
+    border: 8px solid #4f97e4;
+    transition: border-color 0.3s;
+}
+
+.imageninnovadores:hover, .imagenrazonadores:hover, .imagenbiologia:hover {
+    transition: width 0.3s ease;
+    width: 370px;
+}
+
+.imageninnovadores:hover {
+    border-color: rgb(48, 138, 195);
+}
+
+.imageninnovadores:not(:hover) {
+    transition: border-color 0.3s;
+}
+
+.imagenbiologia:hover {
+    border: 8px solid #052547;
+}
+
+.imagenrazonadores:hover {
+    border-color: black;
+}
+
+.imagenrazonadores:not(:hover) {
+    transition: border-color 0.3s;
+}
+
+.imageninnovadores:not(:hover), .imagenrazonadores:not(:hover) {
+    transition: width 0.3s ease;
+}
+
+.innovadores {
+    position: relative;
+}
+
+@media only screen and (max-width: 768px) {
+    .imagenesprincipal {
+        transform: translateY(20%);
+    }
+}
+
+.listaInnovadores {
+    font-size: 170%;
+    font-family: 'Courier New', Courier, monospace;
+    transition: font-size 0.2s ease;
+    text-decoration: none;
+    color: black;
+}
+
+.listaInnovadores:hover {
+    font-size: 180%;
+    color: blueviolet;
+    font-weight: bolder;
+}
